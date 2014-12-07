@@ -32,8 +32,7 @@ void send_cpu_usage_stats_kobject_uevent(char *buf_pid)
         ok_to_send = 1;
     }
 
-    if ((pdev_local != NULL)
- && ok_to_send)
+    if ((pdev_local != NULL) && ok_to_send)
     {
         kobject_uevent_env(&pdev_local->dev.kobj, KOBJ_CHANGE, envp);
     }
